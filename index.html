@@ -54,11 +54,9 @@
       </a>
     </footer>
     <script>
-      var a = document.getElementsByTagName("a")
-      for (var i = 0, len = a.length; i < len; i++) {
-        a[i].addEventListener("click", function (event) {
-          analytics.track('Link visited', { URI: event.target.href })
-        }, false)
+      var links = document.getElementsByTagName('a')
+      for (var i = 0, len = links.length; i < len; i += 1) {
+        analytics.trackLink(links[i], 'Link visited', { URI: links[i].href })
       }
     </script>
   </body>
