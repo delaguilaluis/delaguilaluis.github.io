@@ -5,8 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+      analytics.load("YKhjLnLt4RPqixacQ2axR21QOtwlZ2lT");
+      analytics.page();
+      }}();
+    </script>
   </head>
-
   <body class="helvetica dark-gray bg-near-white">
     <header class="tc pa2 pa4-ns">
       <img src="luis.jpg" alt="Luis' photo" class="br-100 pa1 ba b--black-10 h4 w4">
@@ -48,5 +53,13 @@
         luis@delaguilaluis.com
       </a>
     </footer>
+    <script>
+      var a = document.getElementsByTagName("a")
+      for (var i = 0, len = a.length; i < len; i++) {
+        a[i].addEventListener("click", function (event) {
+          analytics.track('Link visited', { URI: event.target.href })
+        }, false)
+      }
+    </script>
   </body>
 </html>
